@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#F1F3F4" android:clipChildren="false" android:clipToPadding="false">
+
+    <LinearLayout android:id="@+id/topBar"
+        android:layout_width="match_parent" android:layout_height="64dp"
+        android:background="#FFFFFF" android:elevation="8dp"
+        android:orientation="horizontal" android:paddingLeft="12dp"
+        android:paddingRight="12dp" android:gravity="center_vertical">
+
+        <LinearLayout android:id="@+id/searchBarContainer"
+            android:layout_width="0dp" android:layout_height="44dp"
+            android:layout_weight="1" android:background="@drawable/bg_search_pill"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:paddingLeft="14dp" android:paddingRight="6dp">
+
+            <ImageView android:id="@+id/iconSecure"
+                android:layout_width="16dp" android:layout_height="16dp"
+                android:src="@drawable/ic_lock" android:layout_marginRight="8dp"
+                android:scaleType="fitCenter"/>
+
+            <EditText android:id="@+id/urlInput"
+                android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:background="@null"
+                android:hint="Search or enter URL" android:textColorHint="#9AA0A6"
+                android:textColor="#202124" android:textSize="14sp"
+                android:singleLine="true" android:inputType="textUri"
+                android:imeOptions="actionGo" android:maxLines="1" android:ellipsize="end"/>
+
+            <ImageButton android:id="@+id/btnVoice"
+                android:layout_width="36dp" android:layout_height="36dp"
+                android:src="@drawable/my_mic" android:background="@drawable/btn_circle_ripple"
+                android:scaleType="fitCenter" android:padding="7dp"/>
+        </LinearLayout>
+
+        <ImageButton android:id="@+id/btnMenu"
+            android:layout_width="44dp" android:layout_height="44dp"
+            android:layout_marginLeft="8dp" android:background="@drawable/btn_circle_ripple"
+            android:src="@drawable/ic_menu_dots" android:scaleType="fitCenter" android:padding="10dp"/>
+    </LinearLayout>
+
+    <ProgressBar android:id="@+id/myProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent" android:layout_height="2dp"
+        android:layout_below="@id/topBar" android:progressTint="#1A73E8"
+        android:progressBackgroundTint="#E8F0FE" android:visibility="gone"/>
+
+    <RelativeLayout android:id="@+id/webContainer"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_below="@id/myProgressBar">
+
+        <WebView android:id="@+id/myWebView"
+            android:layout_width="match_parent" android:layout_height="match_parent"/>
+
+        <LinearLayout android:id="@+id/errorLayout"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical" android:gravity="center"
+            android:background="#F1F3F4" android:visibility="gone" android:padding="30dp">
+            <ImageView android:layout_width="72dp" android:layout_height="72dp"
+                android:src="@drawable/ic_no_internet" android:layout_marginBottom="16dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="No Connection" android:textSize="20sp" android:textStyle="bold"
+                android:textColor="#3C4043" android:layout_marginBottom="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Check your internet and try again." android:textSize="14sp"
+                android:textColor="#9AA0A6" android:gravity="center" android:layout_marginBottom="24dp"/>
+            <Button android:id="@+id/btnRetry" android:layout_width="160dp" android:layout_height="44dp"
+                android:text="Try Again" android:textColor="#FFFFFF"
+                android:background="@drawable/bg_btn_primary" android:textSize="15sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout android:id="@+id/bottomBar"
+        android:layout_width="match_parent" android:layout_height="64dp"
+        android:layout_alignParentBottom="true" android:background="@drawable/bg_bottom_bar"
+        android:elevation="16dp" android:orientation="horizontal"
+        android:weightSum="4" android:gravity="center">
+
+        <LinearLayout android:id="@+id/navBack" android:layout_width="0dp"
+            android:layout_height="match_parent" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView android:id="@+id/btnBack" android:layout_width="24dp"
+                android:layout_height="24dp" android:src="@drawable/my_back" android:scaleType="fitCenter"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Back" android:textSize="10sp" android:textColor="#9AA0A6" android:layout_marginTop="3dp"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navForward" android:layout_width="0dp"
+            android:layout_height="match_parent" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView android:id="@+id/btnForward" android:layout_width="24dp"
+                android:layout_height="24dp" android:src="@drawable/my_forward" android:scaleType="fitCenter"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Forward" android:textSize="10sp" android:textColor="#9AA0A6" android:layout_marginTop="3dp"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navRefresh" android:layout_width="0dp"
+            android:layout_height="match_parent" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView android:id="@+id/btnRefresh" android:layout_width="24dp"
+                android:layout_height="24dp" android:src="@drawable/my_refresh" android:scaleType="fitCenter"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Refresh" android:textSize="10sp" android:textColor="#9AA0A6" android:layout_marginTop="3dp"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navHome" android:layout_width="0dp"
+            android:layout_height="match_parent" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView android:id="@+id/btnHome" android:layout_width="24dp"
+                android:layout_height="24dp" android:src="@drawable/my_home" android:scaleType="fitCenter"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Home" android:textSize="10sp" android:textColor="#9AA0A6" android:layout_marginTop="3dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

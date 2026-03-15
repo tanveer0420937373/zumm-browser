@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:background="@drawable/bg_bottom_sheet"
+    android:paddingLeft="16dp" android:paddingRight="16dp"
+    android:paddingBottom="24dp" android:paddingTop="8dp">
+
+    <View android:layout_width="40dp" android:layout_height="4dp"
+        android:layout_gravity="center_horizontal" android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_drag_handle"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Zumm Browser" android:textSize="16sp" android:textStyle="bold"
+        android:gravity="center" android:textColor="#202124" android:layout_marginBottom="20dp"/>
+
+    <!-- Row 1 -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:weightSum="4" android:layout_marginBottom="12dp">
+
+        <LinearLayout android:id="@+id/menuHistory" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center" android:padding="8dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless">
+            <LinearLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/bg_menu_icon_blue" android:gravity="center">
+                <ImageView android:layout_width="26dp" android:layout_height="26dp"
+                    android:src="@drawable/ic_history" android:scaleType="fitCenter"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="History" android:textSize="11sp" android:textColor="#3C4043"
+                android:layout_marginTop="6dp" android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/menuDownloads" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center" android:padding="8dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless">
+            <LinearLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/bg_menu_icon_green" android:gravity="center">
+                <ImageView android:layout_width="26dp" android:layout_height="26dp"
+                    android:src="@drawable/ic_download" android:scaleType="fitCenter"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Downloads" android:textSize="11sp" android:textColor="#3C4043"
+                android:layout_marginTop="6dp" android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/menuBookmarks" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center" android:padding="8dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless">
+            <LinearLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/bg_menu_icon_yellow" android:gravity="center">
+                <ImageView android:layout_width="26dp" android:layout_height="26dp"
+                    android:src="@drawable/ic_bookmark" android:scaleType="fitCenter"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Bookmarks" android:textSize="11sp" android:textColor="#3C4043"
+                android:layout_marginTop="6dp" android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/menuCopy" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center" android:padding="8dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless">
+            <LinearLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/bg_menu_icon_purple" android:gravity="center">
+                <ImageView android:layout_width="26dp" android:layout_height="26dp"
+                    android:src="@drawable/ic_copy" android:scaleType="fitCenter"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Copy Link" android:textSize="11sp" android:textColor="#3C4043"
+                android:layout_marginTop="6dp" android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Row 2 -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:weightSum="4" android:layout_marginBottom="20dp">
+
+        <LinearLayout android:id="@+id/menuShare" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center" android:padding="8dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless">
+            <LinearLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/bg_menu_icon_teal" android:gravity="center">
+                <ImageView android:layout_width="26dp" android:layout_height="26dp"
+                    android:src="@drawable/ic_share" android:scaleType="fitCenter"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Share" android:textSize="11sp" android:textColor="#3C4043"
+                android:layout_marginTop="6dp" android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/menuDesktop" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center" android:padding="8dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless">
+            <LinearLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/bg_menu_icon_indigo" android:gravity="center">
+                <ImageView android:layout_width="26dp" android:layout_height="26dp"
+                    android:src="@drawable/ic_desktop" android:scaleType="fitCenter"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Desktop" android:textSize="11sp" android:textColor="#3C4043"
+                android:layout_marginTop="6dp" android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/menuPDF" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center" android:padding="8dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless">
+            <LinearLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/bg_menu_icon_red" android:gravity="center">
+                <ImageView android:layout_width="26dp" android:layout_height="26dp"
+                    android:src="@drawable/ic_pdf" android:scaleType="fitCenter"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Save PDF" android:textSize="11sp" android:textColor="#3C4043"
+                android:layout_marginTop="6dp" android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/menuNight" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:orientation="vertical" android:gravity="center" android:padding="8dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless">
+            <LinearLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/bg_menu_icon_dark" android:gravity="center">
+                <ImageView android:layout_width="26dp" android:layout_height="26dp"
+                    android:src="@drawable/ic_night" android:scaleType="fitCenter"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Night Mode" android:textSize="11sp" android:textColor="#3C4043"
+                android:layout_marginTop="6dp" android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:background="#EEEEEE" android:layout_marginBottom="12dp"/>
+
+    <LinearLayout android:id="@+id/menuExit"
+        android:layout_width="match_parent" android:layout_height="48dp"
+        android:orientation="horizontal" android:gravity="center"
+        android:background="@drawable/bg_btn_exit">
+        <ImageView android:layout_width="20dp" android:layout_height="20dp"
+            android:src="@drawable/ic_exit" android:layout_marginRight="10dp" android:scaleType="fitCenter"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Exit Zumm Browser" android:textSize="14sp"
+            android:textColor="#EA4335" android:textStyle="bold"/>
+    </LinearLayout>
+
+</LinearLayout>
